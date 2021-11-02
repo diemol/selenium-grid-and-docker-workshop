@@ -1,4 +1,4 @@
-# First exercise
+# Second exercise
 
 What we will do:
 
@@ -13,6 +13,9 @@ What we will do:
 2. If using GitPod:
     * In the `config.toml` file, replace `url` with the result of `hostname -I` and port `2375`.
     * E.g. `url = "http://10.76.10.28:2375"`
+3. If using GitPod or Linux:
+    * Under the `exercise-2` directory, create the `assets` directory: `mkdir assets`
+    * Change the permissions of the directory: `sudo chown 1200:1201 assets`
 3. On a terminal, under the `exercise-2` directory, type `docker-compose -f docker-compose-v3-dynamic-grid.yml up`.
 4. Head to your machine/instance url, and check the port `4444`
 
@@ -27,3 +30,7 @@ What we will do:
 3. Head to the Grid UI, and see how tests get executed.
 4. When you are done, under the `exercise-2` directory, type `Ctrl+C` to stop the Grid and then `docker-compose -f docker-compose-v3-dynamic-grid.yml down`
 5. Explore the `assets` directory, check the capabilities file and the video.
+6. If using GitPod:
+    * Navigate on the terminal to the `exercise-2/assets` directory, then run `python3 -m http.server`
+    * Open the suggested url and browse the files.
+
