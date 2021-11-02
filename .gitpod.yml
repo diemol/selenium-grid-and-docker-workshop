@@ -1,0 +1,10 @@
+# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+  # Open port to access Docker API via TCP
+  - init: sudo apt-get update -y && sudo apt-get install -y socat
+    command: socat -4 TCP-LISTEN:2375,fork UNIX-CONNECT:/var/run/docker.sock 
+
+# List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
+ports:
+  - port: 2375
+    onOpen: ignore
