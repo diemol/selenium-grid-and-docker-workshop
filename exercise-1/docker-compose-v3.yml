@@ -13,7 +13,7 @@ services:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      - SE_NODE_GRID_URL=http://localhost:4444
+      - SE_NODE_GRID_URL=https://4444-orange-dragon-cpm1xit2.ws-eu17.gitpod.io
     ports:
       - "6900:5900"
 
@@ -26,7 +26,7 @@ services:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      - SE_NODE_GRID_URL=http://localhost:4444
+      - SE_NODE_GRID_URL=https://4444-orange-dragon-cpm1xit2.ws-eu17.gitpod.io
     ports:
       - "6901:5900"
 
@@ -39,7 +39,7 @@ services:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      - SE_NODE_GRID_URL=http://localhost:4444
+      - SE_NODE_GRID_URL=https://4444-orange-dragon-cpm1xit2.ws-eu17.gitpod.io
     ports:
       - "6902:5900"
 
