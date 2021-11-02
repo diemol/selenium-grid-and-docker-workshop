@@ -25,11 +25,11 @@ import java.util.logging.Logger;
 import java.util.stream.Stream;
 
 @Execution(ExecutionMode.CONCURRENT)
-public class SeleniumGridTest {
+public class SeleniumGridTestExercise1 {
 
-    private static final Logger LOG = Logger.getLogger(SeleniumGridTest.class.getName());
+    private static final Logger LOG = Logger.getLogger(SeleniumGridTestExercise1.class.getName());
     private static final String SELENIUM_GRID_URL = "http://localhost:4444";
-    private static final long SLEEP_TIME = 5000;
+    private static final long SLEEP_TIME = 10000;
 
     static Stream<Arguments> browsersAndPlatforms() {
         return Stream.of(
@@ -59,8 +59,6 @@ public class SeleniumGridTest {
         }
         capabilities.setCapability(CapabilityType.PLATFORM_NAME, platformName);
         capabilities.setCapability("se:name", testName);
-        capabilities.setCapability("se:recordVideo", true);
-        capabilities.setCapability("se:screenResolution", "1920x1440");
         RemoteWebDriver remoteWebDriver = new RemoteWebDriver(gridUrl, capabilities);
         remoteWebDriver.manage().window().maximize();
         return remoteWebDriver;
