@@ -2,3 +2,7 @@
 */*/target
 assets
 .DS_Store
+.settings
+.classpath
+.factorypath
+.project

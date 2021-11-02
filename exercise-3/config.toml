@@ -15,3 +15,12 @@ configs = [
 url = "http://10.76.10.28:2375"
 # Docker image used for video recording
 video-image = "selenium/video:ffmpeg-4.3.1-20211102"
+
+[relay]
+# Sauce Labs server endpoint
+url = "https://ondemand.us-west-1.saucelabs.com:443/wd/hub"
+status-endpoint = "/status"
+# Stereotypes supported by the service
+configs = [
+  "10", '{"browserName": "safari", "platformName": "macOS 11.00", "browserVersion": "14"}'
+]

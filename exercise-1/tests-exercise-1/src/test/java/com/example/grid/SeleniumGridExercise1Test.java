@@ -103,44 +103,12 @@ public class SeleniumGridExercise1Test {
 
     @ParameterizedTest(name = "{index} ==> Browser: {0}, Platform: {1}")
     @MethodSource("browsersAndPlatforms")
-    public void addTwoItemsToCart(String browserName, String platformName, TestInfo testInfo)
-      throws Exception {
-        RemoteWebDriver driver = createDriver(getTestName(testInfo), browserName, platformName);
-        try {
-            loginToSauceDemo(driver, "standard_user", "secret_sauce");
-            driver.get("https://www.saucedemo.com/inventory.html");
-            driver.findElement(By.className("btn_primary")).click();
-            driver.findElement(By.className("btn_primary")).click();
-            assertEquals("2", driver.findElement(By.className("shopping_cart_badge")).getText());
-
-            driver.get("https://www.saucedemo.com/cart.html");
-            assertEquals(2, driver.findElements(By.className("inventory_item_name")).size());
-        } finally {
-            driver.quit();
-        }
-    }
-
-    @ParameterizedTest(name = "{index} ==> Browser: {0}, Platform: {1}")
-    @MethodSource("browsersAndPlatforms")
     public void validCredentials(String browserName, String platformName, TestInfo testInfo)
       throws Exception {
         RemoteWebDriver driver = createDriver(getTestName(testInfo), browserName, platformName);
         try {
             loginToSauceDemo(driver, "standard_user", "secret_sauce");
             assertTrue(driver.getCurrentUrl().contains("inventory"));
-        } finally {
-            driver.quit();
-        }
-    }
-
-    @ParameterizedTest(name = "{index} ==> Browser: {0}, Platform: {1}")
-    @MethodSource("browsersAndPlatforms")
-    public void invalidCredentials(String browserName, String platformName, TestInfo testInfo)
-      throws Exception {
-        RemoteWebDriver driver = createDriver(getTestName(testInfo), browserName, platformName);
-        try {
-            loginToSauceDemo(driver, "bad", "bad");
-            assertTrue(driver.findElements(By.className("error-button")).size() > 0);
         } finally {
             driver.quit();
         }

@@ -25,7 +25,7 @@ What we will do:
 
 ### Run a few tests
 
-1. Explore the tests located under the `exercise-2/tests-exercise-2`, specifically the `SeleniumGridTestExercise2` class.
+1. Explore the tests located under the `exercise-2/tests-exercise-2`, specifically the `SeleniumGridExercise2Test` class.
 2. Open a new terminal, and under the `exercise-2/tests-exercise-2`, run `mvn clean test`.
 3. Head to the Grid UI, and see how tests get executed.
 4. When you are done, under the `exercise-2` directory, type `Ctrl+C` to stop the Grid and then `docker-compose -f docker-compose-v3-dynamic-grid.yml down`

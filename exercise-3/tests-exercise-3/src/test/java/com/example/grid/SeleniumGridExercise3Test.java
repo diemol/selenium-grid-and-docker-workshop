@@ -19,15 +19,16 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.Browser;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.safari.SafariOptions;
 
 import java.net.URL;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
 
 @Execution(ExecutionMode.CONCURRENT)
-public class SeleniumGridExercise2Test {
+public class SeleniumGridExercise3Test {
 
-    private static final Logger LOG = Logger.getLogger(SeleniumGridExercise2Test.class.getName());
+    private static final Logger LOG = Logger.getLogger(SeleniumGridExercise3Test.class.getName());
     private static final String SELENIUM_GRID_URL = "http://localhost:4444";
     private static final long SLEEP_TIME = 10000;
 
@@ -35,7 +36,8 @@ public class SeleniumGridExercise2Test {
         return Stream.of(
           arguments(Browser.CHROME.browserName(), Platform.LINUX.name()),
           arguments(Browser.FIREFOX.browserName(), Platform.LINUX.name()),
-          arguments(Browser.EDGE.browserName(), Platform.LINUX.name())
+          arguments(Browser.EDGE.browserName(), Platform.LINUX.name()),
+          arguments(Browser.SAFARI.browserName(), "macOS 11.00")
         );
     }
 
@@ -54,13 +56,23 @@ public class SeleniumGridExercise2Test {
             case "MicrosoftEdge":
                 capabilities = new EdgeOptions();
                 break;
+            case "safari":
+                capabilities =  new SafariOptions();
+                break;
             default:
                 throw new Exception("Browser not configured! " + browserName);
         }
         capabilities.setCapability(CapabilityType.PLATFORM_NAME, platformName);
-        capabilities.setCapability("se:name", testName);
-        capabilities.setCapability("se:recordVideo", true);
-        capabilities.setCapability("se:screenResolution", "1920x1440");
+        if ("safari".equalsIgnoreCase(browserName)) {
+            capabilities.setCapability("sauce:name", testName);
+            capabilities.setCapability("sauce:username", System.getenv("SAUCE_USERNAME"));
+            capabilities.setCapability("sauce:accessKey", System.getenv("SAUCE_ACCESS_KEY"));
+            capabilities.setCapability("sauce:screenResolution", "1920x1440");
+        } else {
+            capabilities.setCapability("se:name", testName);
+            capabilities.setCapability("se:recordVideo", true);
+            capabilities.setCapability("se:screenResolution", "1920x1440");
+        }
         RemoteWebDriver remoteWebDriver = new RemoteWebDriver(gridUrl, capabilities);
         remoteWebDriver.manage().window().maximize();
         return remoteWebDriver;
