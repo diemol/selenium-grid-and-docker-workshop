@@ -14,7 +14,7 @@ services:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      - SE_NODE_GRID_URL=https://4444-orange-dragon-cpm1xit2.ws-eu17.gitpod.io
+      - SE_NODE_GRID_URL=https://4444-pink-alpaca-pewfvpjn.ws-eu17.gitpod.io/
 
   selenium-hub:
     image: selenium/hub:4.0.0-20211102

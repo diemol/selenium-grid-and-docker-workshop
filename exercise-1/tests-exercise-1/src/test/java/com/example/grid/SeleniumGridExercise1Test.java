@@ -25,9 +25,9 @@ import java.util.logging.Logger;
 import java.util.stream.Stream;
 
 @Execution(ExecutionMode.CONCURRENT)
-public class SeleniumGridTestExercise1 {
+public class SeleniumGridExercise1Test {
 
-    private static final Logger LOG = Logger.getLogger(SeleniumGridTestExercise1.class.getName());
+    private static final Logger LOG = Logger.getLogger(SeleniumGridExercise1Test.class.getName());
     private static final String SELENIUM_GRID_URL = "http://localhost:4444";
     private static final long SLEEP_TIME = 10000;
 
