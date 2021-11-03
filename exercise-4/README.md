@@ -7,7 +7,7 @@ What we will do:
 * Explore the Grid and run a few tests
 * Check results locally and in Sauce Labs
 
-### Start Selenium Grid with Docker
+### Start [Sauce To Go](https://opensource.saucelabs.com/sauce-togo/)
 
 1. If not done before, create a Sauce Labs account (free trial) at https://saucelabs.com/sign-up
 2. If using GitPod or Linux:
