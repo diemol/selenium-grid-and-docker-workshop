@@ -22,5 +22,5 @@ url = "https://ondemand.us-west-1.saucelabs.com:443/wd/hub"
 status-endpoint = "/status"
 # Stereotypes supported by the service
 configs = [
-  "10", '{"browserName": "safari", "platformName": "macOS 11.00", "browserVersion": "14"}'
+  "5", '{"browserName": "safari", "platformName": "macOS 11.00", "browserVersion": "14"}'
 ]
