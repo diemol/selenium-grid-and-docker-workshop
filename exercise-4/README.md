@@ -1,11 +1,10 @@
-# Third exercise
+# Fourth exercise
 
 What we will do:
 
-* Explore the configuration to enable Sauce Labs in Grid
-* Start a Dynamic Selenium Grid with Docker
-* Explore the Grid and run a few tests
-* Check results locally and in Sauce Labs
+* Configure and start Sauce To Go
+* Run a few tests
+* Check results in Sauce Labs
 
 ### Start [Sauce To Go](https://opensource.saucelabs.com/sauce-togo/)
 
