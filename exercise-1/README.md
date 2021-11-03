@@ -8,7 +8,7 @@ What we will do:
 
 ### Start Selenium Grid with Docker
 
-1. Under the `exercise-2` directory, check the `docker-compose-v3.yml` file. 
+1. Under the `exercise-1` directory, check the `docker-compose-v3.yml` file. 
     * Set `SE_NODE_GRID_URL` to `localhost` if you are using your own machine
     * If you are using GitPod, use your GitPod url (e.g. https://4444-orange-dragon-cpm1xit2.ws-eu17.gitpod.io).
 2. On a terminal, under the `exercise-1` directory, type `docker-compose -f docker-compose-v3.yml up`. 
