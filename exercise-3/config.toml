@@ -2,9 +2,9 @@
 # Configs have a mapping between the Docker image to use and the capabilities that need to be matched to
 # start a container with the given image.
 configs = [
-    "selenium/standalone-firefox:4.0.0-20211102", '{"browserName": "firefox", "platformName": "linux"}',
-    "selenium/standalone-chrome:4.0.0-20211102", '{"browserName": "chrome", "platformName": "linux"}',
-    "selenium/standalone-edge:4.0.0-20211102", '{"browserName": "MicrosoftEdge", "platformName": "linux"}'
+    "selenium/standalone-firefox:4.1.0-20211123", '{"browserName": "firefox", "platformName": "linux"}',
+    "selenium/standalone-chrome:4.1.0-20211123", '{"browserName": "chrome", "platformName": "linux"}',
+    "selenium/standalone-edge:4.1.0-20211123", '{"browserName": "MicrosoftEdge", "platformName": "linux"}'
     ]
 
 # URL for connecting to the docker daemon
@@ -14,7 +14,7 @@ configs = [
 # socat -4 TCP-LISTEN:2375,fork UNIX-CONNECT:/var/run/docker.sock
 url = "http://10.76.10.28:2375"
 # Docker image used for video recording
-video-image = "selenium/video:ffmpeg-4.3.1-20211102"
+video-image = "selenium/video:ffmpeg-4.3.1-20211124"
 
 [relay]
 # Sauce Labs server endpoint

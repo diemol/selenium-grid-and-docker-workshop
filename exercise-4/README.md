@@ -21,14 +21,14 @@ What we will do:
     docker run --rm --name sauce-togo -p 4444:4444 \
     -v ${PWD}/config.toml:/opt/bin/config.toml \
     -v ${PWD}/assets:/opt/selenium/assets \
-    saucelabs/stg-standalone:20211102
+    saucelabs/stg-standalone:20211124
     ```
     * Windows PowerShell:
     ```powershell
     docker run --rm --name sauce-togo -p 4444:4444 `
     -v ${PWD}/config.toml:/opt/bin/config.toml `
     -v ${PWD}/assets:/opt/selenium/assets `
-    saucelabs/stg-standalone:20211102
+    saucelabs/stg-standalone:20211124
     ```
 5. Head to your machine/instance url, and check the port `4444`
 
