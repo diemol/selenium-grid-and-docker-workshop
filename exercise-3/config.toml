@@ -14,7 +14,7 @@ configs = [
 # socat -4 TCP-LISTEN:2375,fork UNIX-CONNECT:/var/run/docker.sock
 url = "http://10.76.10.28:2375"
 # Docker image used for video recording
-video-image = "selenium/video:ffmpeg-4.3.1-20211124"
+video-image = "selenium/video:ffmpeg-4.3.1-20211123"
 
 [relay]
 # Sauce Labs server endpoint
